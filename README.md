@@ -27,6 +27,8 @@ This will create the files required to compute the filtered metrics.
 In order to reproduce the results of Booster on the four datasets in the paper, you can run the following commands
 
 ```
+CUDA_VISIBLE_DEVICES=0 python learner.py --dataset ICEWS14 --model TNT --rank 2000 --emb_reg 0.0075  --time_reg 0.01 --batch_size 1000 --max_epochs 2000  --valid_freq 100
+
 python learner.py --dataset ICEWS14 --model HyTE --rank 200 --emb_reg 0.1 --time_reg 0 --batch_size 500 --valid_freq 2
 0 --max_epochs 100
 
