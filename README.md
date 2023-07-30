@@ -31,6 +31,7 @@ python learner.py --dataset ICEWS14 --model TNT --rank 2000 --emb_reg 0.0075  --
 
 python learner.py --dataset ICEWS14 --model HyTE --rank 200 --emb_reg 0.1 --time_reg 0 --batch_size 500 --valid_freq 20 --max_epochs 100
 
+python learner.py --dataset ICEWS14 --model TA --rank 200 --emb_reg 0.025 --time_reg 0.0025 --batch_size 1000 --valid_freq 20 --max_epochs 200
 ```
 
 ## Officical implementation of baseline models
