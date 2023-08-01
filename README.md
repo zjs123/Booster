@@ -29,18 +29,11 @@ In order to reproduce the results of Booster on the four datasets in the paper, 
 ```
 python learner.py --dataset ICEWS14 --model TNT --rank 2000 --emb_reg 0.0075  --time_reg 0.01 --batch_size 1000 --max_epochs 2000  -- valid_freq 100
 
-python learner.py --dataset ICEWS14 --model HyTE --rank 200 --emb_reg 0.1 --time_reg 0 --batch_size 500 --valid_freq 20 --max_epochs 100
-
-python learner.py --dataset ICEWS14 --model TA --rank 200 --emb_reg 0.025 --time_reg 0.0025 --batch_size 1000 --valid_freq 20 --max_epochs 200
-
 python learner.py --dataset ICEWS05-15 --model TNT --rank 2000 --emb_reg 0.0025 --time_reg 0.1 --batch_size 1000
 
 python learner.py --dataset yago11k --model TNT --rank 2000 --emb_reg 0.025 --time_reg 0.001 --batch_size 1000 --valid_freq 100 --learning_rate 0.1 --max_epochs 1000
 
 python learner.py --dataset wikidata12k --model TNT --rank 2000 --emb_reg 0.025 --time_reg 0.0025 --batch_size 1000 --valid_freq 100 --learning_rate 0.1 --max_epochs 1000
-
-python learner.py --dataset yago11k --model TA --rank 200 --emb_reg 0.025 --time_reg 0.0025 --batch_size 1000 --valid_freq 20 --learning_rate 0.1 --max_epochs 200
-
 ```
 
 ## Officical implementation of baseline models
