@@ -112,8 +112,9 @@ class WeightCroLoss(nn.Module):
 					fine_tune_score_pos = (1+self.masked_softmax(torch.relu(-tar_outputs + max_), dim=0).detach())*F.logsigmoid((tar_outputs - max_.detach())/10)
 					result_loss += -0.1*fine_tune_score_pos.mean()
 				if model_type == 'HyTE_ya':
+					result_loss = 0
 					outputs_masked = outputs
-					log = F.log_softmax(outputs_masked, dim=1)
+					log = F.log_softmax(outputs_masked/10, dim=1)
 					traget = traget.reshape(-1,1)
 					log = log.gather(1, traget)
 					result_loss = -1*log
@@ -122,7 +123,7 @@ class WeightCroLoss(nn.Module):
 					tar_outputs = outputs_masked.gather(1, traget)
 					max_ = torch.max(outputs_masked,dim=1)[0]
 					fine_tune_score_neg = (self.masked_softmax(torch.relu(-tar_outputs+outputs_masked), dim=1).detach()*F.logsigmoid(-outputs_masked/5)).sum(dim = 1)
-					result_loss += -fine_tune_score_neg.mean()
+					#result_loss += -fine_tune_score_neg.mean()
 
 					fine_tune_score_pos = (self.masked_softmax(torch.relu(tar_outputs - max_), dim=0).detach())*F.logsigmoid((tar_outputs))
 					#result_loss += -fine_tune_score_pos.mean()
@@ -223,8 +224,8 @@ class BoosterLoss(nn.Module):
 			result_loss = 0
 			can_log = F.log_softmax(can_outputs, dim=1)
 			can_log = can_log.gather(1, can_target)
-			result_loss = -1*can_log
-			result_loss = result_loss.mean(dim=0)
+			#result_loss = -1*can_log
+			#result_loss = result_loss.mean(dim=0)
 			
 			pos_outputs = can_outputs.gather(1, can_target)
 			fine_tune_score_neg = (F.softmax(can_outputs, dim=1).detach()*F.logsigmoid(-can_outputs/10)).sum(dim = 1)

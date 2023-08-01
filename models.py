@@ -992,6 +992,8 @@ class HyTE(torch.nn.Module):
     def post_epoch(self):
         with torch.no_grad():
             self.time_embs.weight.div_(torch.norm(self.time_embs.weight, dim=-1, keepdim=True))
+            self.ent_embs.weight.div_(torch.norm(self.ent_embs.weight, dim=-1, keepdim=True))
+            self.rel_embs.weight.div_(torch.norm(self.rel_embs.weight, dim=-1, keepdim=True))
     
     def get_ranking(self, queries, filters, batch_size, year2id=None, chunk_size = -1):
         if chunk_size < 0:

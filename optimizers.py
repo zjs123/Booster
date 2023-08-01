@@ -546,12 +546,12 @@ class HyTEOptimizer(object):
                     if 'ICEWS' in args.dataset:
                         l = l_fit + 0.1*l_reg + l_fit_can
                     else:
-                        l = l_fit + l_fit_can# + 0.1*l_reg #+ l_reg_can
+                        l = l_fit + l_fit_can + l_reg #+ l_reg_can
                     
                     self.optimizer.zero_grad()
                     l.backward()
                     self.optimizer.step()
-                    #self.model.post_epoch()
+                    self.model.post_epoch()
                     b_begin += self.batch_size
                     b_begin_booster += booster_batch_size
                     bar.update(input_batch.shape[0])
@@ -606,11 +606,11 @@ class HyTEOptimizer(object):
                     if 'ICEWS' in args.dataset:
                         l = l_fit + l_reg
                     else:
-                        l = l_fit# + l_reg
+                        l = l_fit + l_reg
                     self.optimizer.zero_grad()
                     l.backward()
                     self.optimizer.step()
-                    #self.model.post_epoch()
+                    self.model.post_epoch()
                     b_begin += self.batch_size
                     bar.update(input_batch.shape[0])
                     try:
