@@ -1,4 +1,4 @@
-# [Towards Debiasing Temporal Knowledge Graph Representation Learning (submitted to ICDE 2024)]()
+![image](https://github.com/zjs123/Booster/assets/17922610/31024eb2-741c-468d-879c-5ff32c744ae2)# [Towards Debiasing Temporal Knowledge Graph Representation Learning (submitted to ICDE 2024)]()
 
 
 ## Installation
@@ -38,6 +38,9 @@ python learner.py --dataset ICEWS05-15 --model TNT --rank 2000 --emb_reg 0.0025 
 python learner.py --dataset yago11k --model TNT --rank 2000 --emb_reg 0.025 --time_reg 0.001 --batch_size 1000 --valid_freq 100 --learning_rate 0.1 --max_epochs 1000
 
 python learner.py --dataset wikidata12k --model TNT --rank 2000 --emb_reg 0.025 --time_reg 0.0025 --batch_size 1000 --valid_freq 100 --learning_rate 0.1 --max_epochs 1000
+
+python learner.py --dataset yago11k --model TA --rank 200 --emb_reg 0.025 --time_reg 0.0025 --batch_size 1000 --valid_freq 20 --learning_rate 0.1 --max_epochs 200
+
 
 ```
 
