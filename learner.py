@@ -389,7 +389,7 @@ def learn(model=args.model,
 
     model.load_state_dict(torch.load(os.path.join(PATH, modelname+'.pkl')))
     results = avg_both(*dataset.eval(model, 'test', -1))
-    #print("\n\nTEST : ", results)
+    print("\n\nTEST : ", results)
     print("\n\nTEST : ", best_result)
     f = open(os.path.join(PATH, 'result.txt'), 'w+')
     f.write("\n\nTEST : ")
