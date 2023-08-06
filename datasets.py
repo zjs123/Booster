@@ -1342,13 +1342,6 @@ class TemporalDataset(object):
                 lambda x: torch.mean((ranks <= x).float()).item(),
                 at
             ))))
-        '''
-        if split == 'test':
-            store_epoches = [30]
-            if epoch_num in store_epoches:
-                pickle.dump(ranks, open('/titan_data2/zhangjs/TELM_ranks/ta_rank_boo_e'+str(epoch_num)+'.pickle', 'wb'))
-                print("saved epoch "+str(epoch_num))
-        '''
         return mean_reciprocal_rank, hits_at
 
     def get_shape(self):
