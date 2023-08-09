@@ -43,8 +43,9 @@ python learner.py --dataset wikidata12k --model TNT --rank 2000 --emb_reg 0.025 
 | TA-TransE ([Alberto et al., 2018](https://www.aclweb.org/anthology/D18-1516.pdf))      | [Link](https://github.com/INK-USC/RE-Net/tree/master/baselines)     |
 | HyTE ([Dasgupta et al., 2018](http://talukdar.net/papers/emnlp2018_HyTE.pdf))        | [Link](https://github.com/malllabiisc/HyTE)                               |
 | DE-DistMult ([Goel et al., 2020](https://arxiv.org/pdf/1907.03143.pdf))        | [Link](https://github.com/BorealisAI/de-simple)                               |
-| Timeplex ([Timothee et al., 2020](https://openreview.net/pdf?id=rke2P1BFwS))        | [Link](https://github.com/facebookresearch/tkbc)                               |
+| TNT ([Timothee et al., 2020](https://openreview.net/pdf?id=rke2P1BFwS))        | [Link](https://github.com/facebookresearch/tkbc)                               |
 | TeRo ([Chenjin et al., 2020](https://arxiv.org/pdf/2010.01029.pdf))        | [Link](https://github.com/soledad921/ATISE)                               |
+| Timeplex ([Jain et al., 2020](https://aclanthology.org/2020.emnlp-main.305/))        | [Link](https://github.com/dair-iitd/tkbi)                               |
 
 
 ## Acknowledgement
