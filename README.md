@@ -1,4 +1,4 @@
-# [Towards Debiasing Temporal Knowledge Graph Representation Learning (submitted to ICDE 2024)]()
+# [Towards Debiasing Temporal Knowledge Graph Representation Learning]()
 
 
 ## Installation
