@@ -1,4 +1,4 @@
-# [Towards Debiasing Temporal Knowledge Graph Representation Learning]()
+# [towards pattern-aware data augmentation for temporal knowledge graph completion]()
 
 
 ## Installation
