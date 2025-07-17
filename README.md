@@ -1,4 +1,4 @@
-# [towards pattern-aware data augmentation for temporal knowledge graph completion]()
+# [Towards pattern-aware data augmentation for temporal knowledge graph completion]()
 
 
 ## Installation
